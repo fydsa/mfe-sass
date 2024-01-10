@@ -1,9 +1,15 @@
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './App';
 
 // Mount function to start the app
 const mount = (el: Element) => {
 	const container = ReactDOM.createRoot(el);
-	container.render(<h1>marketing</h1>);
+	container.render(
+		<StrictMode>
+			<App />
+		</StrictMode>
+	);
 };
 
 // If we are in development mode and in isolation,
