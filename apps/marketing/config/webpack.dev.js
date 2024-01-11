@@ -2,7 +2,7 @@ const { merge } = require('webpack-merge');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const ModuleFedetarationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 const commonConfig = require('./webpack.common');
 
@@ -15,7 +15,7 @@ const devConfig = {
 		historyApiFallback: true,
 	},
 	plugins: [
-		new ModuleFedetarationPlugin({
+		new ModuleFederationPlugin({
 			name: 'marketing',
 			filename: 'remoteEntry.js',
 			exposes: {
